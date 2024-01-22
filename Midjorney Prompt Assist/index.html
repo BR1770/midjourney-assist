@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MIDJOURNEY PROMPT ASSIST</title>
+</head>
+<body>
+  <header>
+    <p>/Prompt Assist</p>
+    <!--<img src="/image/filename.png" alt="Logo" class="logo" />-->
+  </header>
+  <div class="main-container">
+  <div class="container"></div>
+  
+    <form id="inputForm">
+      <div class="section">
+        <label for="text">Subject/</label>
+        <input type="text" id="text" placeholder="">
+      </div>
+
+      <div class="select">
+        <label for="dropdown1">Photo Style/</label>
+        <select id="dropdown1" data-append=" photo">
+          <option value="" selected></option>
+          <option value="Landscape photo">Landscape</option>
+          <option value="Portrait photo">Portrait</option>
+          <option value="Black and White photo">Black and White</option>
+          <option value="Macro photo">Macro</option>
+          <option value="Long Exposure photo">Long Exposure</option>
+          <option value="Street style photo">Street style</option>
+          <option value="Documentary photo">Documentary</option>
+          <option value="Fashion photo">Fashion</option>
+          <option value="Fine Art photo">Fine Art</option>
+          <option value="Architectural photo">Architectural</option>
+          <option value="Wedding photo">Wedding</option>
+          <option value="Sports photo">Sports</option>
+          <option value="Astrophotography photo">Astrophotography</option>
+          <option value="Aerial photo">Aerial</option>
+          <option value="Night photo">Night</option>
+          <option value="Abstract photo">Abstract</option>
+          <option value="HDR photo">HDR</option>
+          <option value="Underwater photo">Underwater</option>
+          <option value="Wildlife photo">Wildlife</option>
+          <option value="Photojournalism photo">Photojournalism</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>
+      <div class="select">
+        <label for="dropdown2">Photographic Film Examples/</label>
+        <select id="dropdown2">
+          <option value="" selected></option>
+          <option value="shot on Kodak Tri-X 400">Kodak Tri-X 400 B&W</option>
+          <option value="shot on Kodak Portra 160">Kodak Portra 160</option>
+          <option value="shot on Kodak Gold 200">Kodak Gold 200</option>
+          <option value="shot on Kodak Ektar 100">Kodak Ektar 100</option>
+          <option value="shot on Kodak T-Max 400">Kodak T-Max 400 B&W</option>
+          <option value="shot on Kodak Aerochrome">Kodak Aerochromeo</option>
+          <option value="shot on Kodak Vision3 200T color negative film 523">Kodak Vision3 200T</option>
+          <option value="shot on Kodak Aerochrome">Kodak Aerochromeo</option>
+          <option value="shot on Fujifilm Velvia 50">Fujifilm Velvia 50</option>
+          <option value="shot on Fujifilm Provia 100F">Fujifilm Provia 100F</option>
+          <option value="shot on Fujifilm Superia 400">Fujifilm Superia 400</option>
+          <option value="shot on Ilford Delta 3200">Ilford Delta 3200 B&W</option>
+          <option value="shot on Ilford HP5 Plus 400">Ilford HP5 Plus 400 B&W</option>
+          <option value="shot on Ilford FP4 Plus 125">Ilford FP4 Plus 125 B&W</option>
+          <option value="shot on Agfa Vista 200">Agfa Vista 200</option>      
+          <option value="shot on Cinestill 800T">Cinestill 800T</option>
+          <option value="shot on Lomography Co">Lomography Co</option>
+          <option value="Daguerreotype">Daguerreotype B&W</option>
+          <option value="Tinytype, Black and white">Tinytype B&W</option>
+          <option value="Super-XX Black and white">Super-XX B&W</option>
+          <option value="shot on Instax Film">Instax Film</option>
+          <option value="shot on Lomography redscale XR 50-200">Lomography Redscale</option>
+
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>      
+      <div class="select">
+        <label for="dropdown3">Light Types/</label>
+        <select id="dropdown3">
+          <option value="" selected></option>
+          <option value="Natural Light">Natural Light</option>
+          <option value="Softbox">Softbox</option>
+          <option value="Umbrella">Umbrella</option>
+          <option value="Beauty Dish">Beauty Dish</option>
+          <option value="Afternoon light">Afternoon light</option>
+          <option value="Ring Light">Ring Light</option>
+          <option value="Octabox">Octabox</option>
+          <option value="Reflector">Reflector</option>
+          <option value="Hard light">Hard Light</option>
+          <option value="Soft light">Soft Light</option>
+          <option value="Diffuse light">Diffuse Light</option>
+          <option value="Neon light">Neon Light</option>
+          <option value="Back light">Back Light</option>
+          <option value="moonlight">MoonLight</option>
+          <option value="Sunny day">Sunny day</option>
+          <option value="Grid Light">Grid</option>
+          <option value="High key Light">High Key Light</option>          
+          <option value="Low key Light">Low Key Light</option>
+          <option value="Color fill Light">Color fill Light</option>   
+          <option value="Split Light">Split Light</option>   
+          <option value="Ray Tracing">Ray Tracing - 3D aspect</option>          
+          <option value="Snoot">Snoot</option>
+          <option value="Gobo">Gobo</option>
+          <option value="LED Panel">LED Panel</option>
+          <option value="Speedlight">Speedlight</option>
+          <option value="Continuous Light">Continuous Light</option>
+          <option value="Strobe">Strobe</option>
+          <option value="Window Light">Window Light</option>
+          <option value="Volumetric Light">Volumetric Light</option>
+          <option value="Caustics">Caustics - Water reflex</option>
+          <option value="Parabolic Reflector">Parabolic Reflector</option>
+          <option value="chiaroscuro">Chiaroscuro</option>
+          <option value="Rembrandt Light">Rembrandt Light</option>
+          <option value="Strip Light">Strip Light</option>
+          <option value="Candle Light">Candle Light</option>
+          <option value="Fresnel Spotlight">Fresnel Spotlight</option>
+          <option value="Monolight">Monolight</option>
+          <option value="Golden Hour">Golden Hour</option>
+          <option value="Dappled light">Dappled light - Light through trees</option>
+          <option value="Bounce Card">Bounce Card</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>            
+      <div class="select">
+        <label for="dropdown4">Camera Models/</label>
+        <select id="dropdown4">
+          <option value="" selected></option>
+          <option value="using a Canon EOS R5">Canon EOS R5</option>
+          <option value="using a Nikon D850">Nikon D850</option>
+          <option value="using a Sony A7R IV">Sony A7R IV</option>
+          <option value="using a Fujifilm X-T4">Fujifilm X-T4</option>
+          <option value="using a Olympus OM-D E-M1 Mark III">Olympus OM-D E-M1 Mark III</option>
+          <option value="using a Panasonic Lumix S1R">Panasonic Lumix S1R</option>
+          <option value="using a Leica M10-R">Leica M10-R</option>
+          <option value="using a Pentax K-1 Mark II">Pentax K-1 Mark II</option>
+          <option value="using a Nikon Z7 II">Nikon Z7 II</option>
+          <option value="using a Canon EOS 5D Mark IV">Canon EOS 5D Mark IV</option>
+          <option value="using a Sony A9 II">Sony A9 II</option>
+          <option value="using a Fujifilm GFX 100">Fujifilm GFX 100</option>
+          <option value="using a Hasselblad X1D II 50C">Hasselblad X1D II 50C</option>
+          <option value="using a Phase One XF IQ4">Phase One XF IQ4</option>
+          <option value="using a Canon EOS 1D">Canon EOS 1D</option>
+          <option value="using a Pinhole Camera">Pinhole Camera</option>
+          <option value="using a Box Camera">Box Camera</option>
+          <option value="using a Polaroid Camera">Polaroid Camera</option>
+          <option value="using a Holga Toy Camera">Holga Toy Camera</option>
+          <option value="using a Diana F+ Camera">Diana F+ Camera</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>      
+      <div class="select">
+        <label for="cameraLenses">Camera Lenses/</label>
+        <select id="cameraLenses">
+          <option value="" selected></option>
+          <option value="Anamorphic lens">Anamorphic Lens</option>
+          <option value="Ricoh Theta 360 degree">Ricoh Theta 360 Degree</option>
+          <option value="Tiny planet effect">Tiny Planet Effect</option>
+          <option value="Fisheye lens">Fisheye Lens</option>
+          <option value="Tilt shift lens">Tilt Shift</option>
+          <option value="35mm film grain">35mm Film Grain</option>
+          <option value="55mm film grain">55mm Film Grain</option>
+          <option value="85mm lens">85mm Lens</option>
+          <option value="Telephoto lens">Telephoto Lens</option>
+          <option value="750mm lens">750mm Lens</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>
+      
+      <div class="select">
+        <label for="dropdown5">Camera Angles/</label>
+        <select id="dropdown5">
+          <option value="" selected></option>
+          <option value="Eye Level angle">Eye Level</option>
+          <option value="High Angle angle">High Angle</option>
+          <option value="Low Angle angle">Low Angle</option>
+          <option value="Ground Level angle">Ground Level</option>
+          <option value="Bird's Eye View angle">Bird's Eye View</option>
+          <option value="Worm's Eye View angle">Worm's Eye View</option>
+          <option value="Satellite View angle">Satellite View</option>
+          <option value="Dutch Tilt angle">Dutch Tilt</option>
+          <option value="Over the Shoulder angle">Over the Shoulder</option>
+          <option value="POV angle">POV</option>
+          <option value="Close-Up angle">Close-Up</option>
+          <option value="Extreme Close-Up angle">Extreme Close-Up</option>
+          <option value="Voyeuristic Shot">Voyeuristic Shot</option>
+          <option value="Medium Shot angle">Medium Shot</option>
+          <option value="Long Shot angle">Long Shot</option>
+          <option value="Wide Shot angle">Wide Shot</option>
+          <option value="Extreme Wide Shot angle">Extreme Wide Shot</option>
+          <option value="Panoramic angle">Panoramic</option>
+          <option value="Tilt angle">Tilt</option>
+          <option value="Dolly In/Out angle">Dolly In/Out</option>
+          <option value="Tracking Shot angle">Tracking Shot</option>
+          <option value="Crane Shot angle">Crane Shot</option>
+          <option value="Aerial Shot angle">Aerial Shot</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>      
+      <div class="select">
+        <label for="dropdown6">Famous Photographers/</label>
+        <select id="dropdown6">
+          <option value="" selected></option>
+          <option value="in the style of Ansel Adams">Ansel Adams</option>
+          <option value="in the style of Richard Avedon">Richard Avedon</option>
+          <option value="in the style of Henri Cartier-Bresson">Henri Cartier-Bresson</option>
+          <option value="in the style of Robert Capa">Robert Capa</option>
+          <option value="in the style of Diane Arbus">Diane Arbus</option>
+          <option value="in the style of Helmut Newton">Helmut Newton</option>
+          <option value="in the style of Dorothea Lange">Dorothea Lange</option>
+          <option value="in the style of Irving Penn">Irving Penn</option>
+          <option value="in the style of Cindy Sherman">Cindy Sherman</option>
+          <option value="in the style of Sebastião Salgado">Sebastião Salgado</option>
+          <option value="in the style of Steve McCurry">Steve McCurry</option>
+          <option value="in the style of Annie Leibovitz">Annie Leibovitz</option>
+          <option value="in the style of David LaChapelle">David LaChapelle</option>
+          <option value="in the style of Vivian Maier">Vivian Maier</option>
+          <option value="in the style of Garry Winogrand">Garry Winogrand</option>
+          <option value="in the style of Man Ray">Man Ray</option>
+          <option value="in the style of Robert Mapplethorpe">Robert Mapplethorpe</option>
+          <option value="in the style of William Eggleston">William Eggleston</option>
+          <option value="in the style of Gordon Parks">Gordon Parks</option>
+          <option value="in the style of Brassai">Brassai</option>
+          <option value="in the style of Edward Weston">Edward Weston</option>
+          <option value="in the style of Mario Testino">Mario Testino</option>
+          <option value="in the style of Andreas Gursky">Andreas Gursky</option>
+          <option value="in the style of Gregory Crewdson">Gregory Crewdson</option>
+          <option value="in the style of Sally Mann">Sally Mann</option>
+          <option value="in the style of Elliott Erwitt">Elliott Erwitt</option>
+          <option value="in the style of Imogen Cunningham">Imogen Cunningham</option>
+          <option value="in the style of Walker Evans">Walker Evans</option>
+          <option value="in the style of Mary Ellen Mark">Mary Ellen Mark</option>
+          <option value="in the style of Arnold Newman">Arnold Newman</option>
+          <option value="in the style of Martin Parr">Martin Parr</option>
+          <option value="in the style of Eve Arnold">Eve Arnold</option>
+          <option value="in the style of James Nachtwey">James Nachtwey</option>
+          <option value="in the style of Herb Ritts">Herb Ritts</option>
+          <option value="in the style of Don McCullin">Don McCullin</option>      
+          <option value="in the style of Peter Lindbergh">Peter Lindbergh</option>
+          <option value="in the style of Weegee (Arthur Fellig)">Weegee (Arthur Fellig)</option>
+          <option value="in the style of Joel Meyerowitz">Joel Meyerowitz</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>
+      <div class="select">
+        <label for="dropdown7">Atmospheres/</label>
+        <select id="dropdown7">
+          <option value="" selected></option>
+          <option value="in a Serene atmosphere">Serene</option>
+          <option value="in a Dramatic atmosphere">Dramatic</option>
+          <option value="in a Eerie atmosphere">Eerie</option>
+          <option value="in a Vibrant atmosphere">Vibrant</option>
+          <option value="in a Mystical atmosphere">Mystical</option>
+          <option value="in a Warm atmosphere">Warm</option>
+          <option value="in a Cold atmosphere">Cold</option>
+          <option value="in a Melancholic atmosphere">Melancholic</option>
+          <option value="in a Nostalgic atmosphere">Nostalgic</option>
+          <option value="in a Dreamy atmosphere">Dreamy</option>
+          <option value="in a Harsh atmosphere">Harsh</option>
+          <option value="in a Minimalistic atmosphere">Minimalistic</option>
+          <option value="in a Romantic atmosphere">Romantic</option>
+          <option value="in a Intimate atmosphere">Intimate</option>
+          <option value="in a Joyful atmosphere">Joyful</option>
+          <option value="in a Chaotic atmosphere">Chaotic</option>
+          <option value="in a Calm atmosphere">Calm</option>
+          <option value="in a Surreal atmosphere">Surreal</option>
+          <option value="in a Desolate atmosphere">Desolate</option>
+          <option value="in a Futuristic atmosphere">Futuristic</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>
+      <div class="select">
+        <label for="dropdown8">Scenarios/</label>
+        <select id="dropdown8">
+          <option value="" selected></option>
+          <option value="Urban scene">Urban</option>
+          <option value="Rural scene">Rural</option>
+          <option value="Forest scene">Forest</option>
+          <option value="Mountain scene">Mountain</option>
+          <option value="Beach scene">Beach</option>
+          <option value="Desert scene">Desert</option>
+          <option value="Snowy scene">Snowy</option>
+          <option value="Underwater scene">Underwater</option>
+          <option value="Studio scene">Studio</option>
+          <option value="Night scene">Night</option>
+          <option value="Indoor scene">Indoor</option>
+          <option value="Outdoor scene">Outdoor</option>
+          <option value="Rainy scene">Rainy</option>
+          <option value="Foggy scene">Foggy</option>
+          <option value="Sunrise/Sunset scene">Sunrise/Sunset</option>
+          <option value="Cityscape scene">Cityscape</option>
+          <option value="Abandoned scene">Abandoned</option>
+          <option value="Street Life scene">Street Life</option>
+          <option value="Festival scene">Festival</option>
+          <option value="Wildlife scene">Wildlife</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>
+      <div class="select">
+        <label for="specialFx">Special FX/</label>
+        <select id="specialFx">
+          <option value="" selected></option>
+          <option value="Landsat 9 satellite false color image">Landsat 9 Satellite False Color Image</option>
+          <option value="Confocal scanning microscope">Confocal Scanning Microscope</option>
+          <option value="Confocal scanning electron microscopy">Confocal Scanning Electron Microscopy</option>
+          <option value="X-ray double exposure">X-Ray Double Exposure</option>
+          <option value="Electroluminescence">Electroluminescence</option>
+          <option value="Photon capture">Photon Capture</option>
+          <option value="Bioluminescent">Bioluminescent</option>
+          <option value="Iridescent algal bloom">Iridescent Algal Bloom</option>
+          <option value="Bloom shader">Bloom Shader</option>
+          <option value="Salt print">Salt Print</option>
+          <option value="Cyanotype">Cyanotype</option>
+          <option value="Collodion wet plate">Collodion Wet Plate</option>
+          <option value="Photogravure sepia print">Photogravure Sepia Print</option>
+          <option value="Gum bichromate printing">Gum Bichromate Printing</option>
+          <option value="Carbon photographic print">Carbon Photographic Print</option>
+          <option value="Gelatin silver print">Gelatin Silver Print</option>
+          <option value="Platinotype">Platinotype</option>
+          <option value="Risograph">Risograph</option>
+          <option value="Solargram">Solargram</option>
+          <option value="Boiled emulsion print with dimensional frame carriage visible">Boiled Emulsion Print with Dimensional Frame Carriage Visible</option>
+          <option value="Elliptical lens flare">Elliptical Lens Flare</option>
+          <option value="Chromatic aberration">Chromatic Aberration</option>
+          <option value="Light leak">Light Leak</option>
+          <option value="Visible noise and film grain">Visible Noise and Film Grain</option>
+          <option value="Super 8 video grain">Super 8 Video Grain</option>
+          <option value="Seurat charcoal drawing textures">Seurat Charcoal Drawing Textures</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>      
+      <div class="select">
+        <label for="aspectRatio">Aspect Ratios/</label>
+        <select id="aspectRatio">
+          <option value="" selected></option>
+          <option value="--ar 1:1">1:1</option>
+          <option value="--ar 4:3">4:3</option>
+          <option value="--ar 3:2">3:2</option>
+          <option value="--ar 16:9">16:9</option>
+          <option value="--ar 16:9">9:16</option>
+          <option value="--ar 21:9">21:9</option>
+        </select>
+        <span class="select_arrow">&#8964;</span>
+      </div>
+      
+
+    </form>
+    
+    
+
+    <div class="result-section">
+      <div class="result-wrapper">
+        <label for="result">Result/</label>
+        <textarea id="result" rows="2" readonly></textarea>
+      </div>
+      <button id="copyButton">COPY PROMPT</button>
+    </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("inputForm");
+      const resultInput = document.getElementById("result");
+      const copyButton = document.getElementById("copyButton");
+  
+      form.addEventListener("input", updateResult);
+      copyButton.addEventListener("click", copyToClipboard);
+  
+      function updateResult() {
+        const textInput = document.getElementById("text");
+        const dropdowns = Array.from(document.querySelectorAll("select"));
+  
+        const inputs = [
+          textInput.value,
+          ...dropdowns.map(
+            (dropdown) =>
+              dropdown.options[dropdown.selectedIndex] &&
+              dropdown.options[dropdown.selectedIndex].value
+          ),
+        ];
+        const selectedInputs = inputs.filter((input) => input && input !== "Select");
+  
+        resultInput.value = selectedInputs.join(", ");
+      }
+  
+      function copyToClipboard() {
+        resultInput.select();
+        document.execCommand("copy");
+      }
+    });
+  </script>  
+
+  <div class="credits">
+    <p>Envisioned by <a href="https://victorbritto.work/about" target="_blank">Victor Britto</a></p>
+    <p>Brought to life by <a href="https://www.linkedin.com/in/eduardoheil/" target="_blank">Eduardo Heil</a></p>
+    <p>Assisted by Chat GPT-4</p>
+    <p></p>
+    <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">MJ Prompt Assist</span> by <span property="cc:attributionName">Victor Britto and Eduardo Heil</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>  </div>
+</div>
+
+
+
+</body>
+</html>

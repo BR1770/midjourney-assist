@@ -1,0 +1,307 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+    /* background-image: url('/Users/eduardo.heil/Documents/My Documents/Projects/Midjourney/Midjorney Prompt Assist/background.jpg'); */
+    background-color: #2e2e2c;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  /* Update the header styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    padding-left: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 28px;
+    font-style: normal;
+  }
+  
+  .logo {
+    max-height: 50px;
+    max-width: 50px;
+    padding-right: 20px;
+  }
+
+  
+  form {
+    background-color: rgba(255, 255, 255, 0);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .main-container {
+    width: 100%;
+    max-width: 960px; /* Adjust this value based on your desired container width */
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px; /* Add some padding on the sides for mobile */
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    .main-container {
+      padding: 0; /* Remove padding on larger screens */
+    }
+  }
+  
+  /* Media query for mobile */
+  @media (max-width: 767px) {
+    input[type="text"],
+    select {
+      width: 100%; /* Make input fields wider on mobile */
+    }
+  }
+  
+    
+
+/*Text field Style*/
+.section,
+.select {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.section label,
+.select label {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .section label,
+  .select label {
+    white-space: normal;
+    margin-right: 5px;
+  }
+}
+input[type="text"] {
+  font-family: 'Helvetica';
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #ffffff 100%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 100% 1px;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #ffffff 100%, #ffffff 100%);
+}
+
+input[type="text"]:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/*label not to break and label to break on smaller screens*/
+.select label {
+  white-space: nowrap;
+  margin-right: 5px;
+}
+@media (max-width: 768px) {
+  .select label {
+    white-space: normal;
+  }
+}
+
+/* Dropdown style */
+@media (max-width: 768px) {
+  .select label {
+    white-space: normal;
+  }
+}
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.select select {
+  font-family: 'Arial';
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(to bottom, #ffffff 100%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: calc(100% - 30px) 1px;
+}
+
+.select select::-ms-expand {
+  display: none;
+}
+
+.select select:hover,
+.select select:focus {
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #7b7b7b 100%, #7b7b7b 100%);
+}
+
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select_arrow {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%) scaleX(2.5) scaleY(1.5); /* scaleX added to scale the arrow horizontally */
+  pointer-events: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+  color: #7b7b7b;
+}
+
+.select select:disabled ~ .select_arrow {
+  color: #cccccc;
+}
+
+
+
+/* Result style */
+
+/* Updated Result Section */
+.result-section {
+  background-color: rgba(255, 255, 255, 0);
+  padding-left: 5px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Change flex direction to column */
+  align-items: flex-start;
+}
+
+.result-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.result-section label {
+  color: #f0f0f0;
+  font-style: bold;
+  margin-right: 10px; /* Add some space between the label and the textarea */
+}
+
+/* Other CSS rules remain the same */
+
+
+.result-section textarea {
+  width: 100%;
+  max-width: 100%;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #ffffff 100%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 100% 1px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Button style */
+button#copyButton {
+  background: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
+  background: radial-gradient(
+    circle,
+    rgba(0, 68, 255, 0.7), /* Slightly more opaque red at center */
+    rgba(0, 140, 255, 0.5)  /* Semi-transparent red towards the edges */
+  );
+  border: none; /* No border */
+  border-radius: 0px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 2px;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+button#copyButton:hover {
+  opacity: 0.5;
+}
+
+/* credits style*/
+.credits {
+  background-color: rgba(255, 255, 255, 0);
+  padding-left: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  a {
+    color: #33d3ff; /* Replace with your preferred color */
+  }
+  
+  a:hover {
+    color: #00c7c4; /* Replace with your preferred color for hover state */
+  }
+  
+}
+
+.credits p {
+  margin: 0;
+  color: #f0f0f0;
+  font-size: small;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Adjust this value based on the desired width */
+}
