@@ -1,4 +1,4 @@
-The /Prompt Assist is an open-source tool designed by Eduardo Heil and me to enhance the output quality and control of prompt-generated images for creatives worldwide.
+The /Prompt Assist is an open-source tool designed by Eduardo Heil and Victor Britto to enhance the output quality and control of prompt-generated images for creatives worldwide.
 
 You can download and adapt the tool to your needs, changing the parameters or adding more items to your list.The tool features several sections in its dropdown menus:
 
